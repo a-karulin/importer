@@ -7,6 +7,7 @@ import java.util.List;
 public interface MessageService {
 
     void save(Message message);
-    List<Message> findByTag(String tag);
+    List<Message> findByTs(String ts);
     List<Message> findAll();
+    public void population();
 }

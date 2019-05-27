@@ -5,6 +5,7 @@
         <form method="post">
             <input type="text" name="text" placeholder="Введите сообщение" />
             <input type="text" name="tag" placeholder="Тэг">
+
             <button type="submit">Добавить</button>
         </form>
     </div>
@@ -13,12 +14,54 @@
         <input type="text" name="filter">
         <button type="submit">Найти</button>
     </form>
+    <div>Загрузить данные в базу</div>
+    <form method="post" action="populate_db">
+        <button type="submit">Начать загрузку</button>
+    </form>
+    <table>
+
+        <tr>
+            <th>id</th>
+            <th>ssoid</th>
+            <th>ts</th>
+            <th>grp</th>
+            <th>type</th>
+            <th>subtype</th>
+            <th>url</th>
+            <th>orgid</th>
+            <th>formid</th>
+            <th>code</th>
+            <th>ltpa</th>
+            <th>sudirresponse</th>
+            <th>ymdh</th>
+        </tr>
+        {{#messages}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{ssoid}}</td>
+            <td>{{ts}}</td>
+            <td>{{grp}}</td>
+            <td>{{type}}</td>
+            <td>{{subtype}}</td>
+            <td>{{url}}</td>
+            <td>{{orgid}}</td>
+            <td>{{formid}}</td>
+            <td>{{code}}</td>
+            <td>{{ltpa}}</td>
+            <td>{{sudirresponse}}</td>
+            <td>{{ymdh}}</td>
+        </tr>
+    {{/messages}}
+        </table>
+    <!--
     {{#messages}}
     <div>
-        <b>{{id}}</b>
+        <type>{{id}}</type>
         <span>{{text}}</span>
-        <i>{{tag}}</i>
+        <sudirresponse>{{tag}}</sudirresponse>
+        <sudirresponse>{{grp}}</sudirresponse>
     </div>
     {{/messages}}
+-->
 </body>
 </html>
