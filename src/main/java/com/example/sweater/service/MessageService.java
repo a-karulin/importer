@@ -10,4 +10,5 @@ public interface MessageService {
     List<Message> findByTs(String ts);
     List<Message> findAll();
     public void population();
+    public void findBiggestPunkt();
 }

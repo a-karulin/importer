@@ -36,7 +36,7 @@ public class GreetingController {
     }
 
     @PostMapping
-    public String add(@RequestParam String ssoid, @RequestParam String ts, @RequestParam String grp,
+    public String add(@RequestParam String ssoid, @RequestParam Long ts, @RequestParam String grp,
                       @RequestParam String type,@RequestParam String subtype,@RequestParam String url,
                       @RequestParam String orgid, @RequestParam String formid, @RequestParam String code, 
                       @RequestParam String ltpa, @RequestParam String sudirresponse, @RequestParam String ymdh,
@@ -72,7 +72,13 @@ public class GreetingController {
     public String populate() {
         messageService.population();
         return "main";
-        }
+    }
+
+    @PostMapping("userAnalitic")
+    public String userAnalitic() {
+        messageService.findBiggestPunkt();
+        return "userAnalitic";
+    }
 
 
 

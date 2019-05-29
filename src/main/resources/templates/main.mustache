@@ -3,9 +3,45 @@
 <body>
     <div>
         <form method="post">
-            <input type="text" name="text" placeholder="Введите сообщение" />
-            <input type="text" name="tag" placeholder="Тэг">
+            <table cellspacing="0">
 
+                <tr>
+                    <td>ssoid</td><td><input type="text" name="ssoid" placeholder="Введите ssoid" /> </td><td>51</td><td>79</td>
+                </tr>
+                <tr>
+                    <td>ts</td><td><input type="text" name="ts" placeholder="Введите ts"></td><td>34</td><td>48</td>
+                </tr>
+                <tr>
+                    <td>grp</td><td><input type="text" name="grp" placeholder="Введите grp"></td><td>57</td><td>36</td>
+                </tr>
+                <tr>
+                    <td>type</td><td><input type="text" name="type" placeholder="Введите type"></td><td>57</td><td>36</td>
+                </tr>
+                <tr>
+                    <td>subtype</td><td><input type="text" name="subtype" placeholder="Введите subtype"></td><td>57</td><td>36</td>
+                </tr>
+                <tr>
+                    <td>url</td><td><input type="text" name="url" placeholder="Введите url"></td><td>57</td><td>36</td>
+                </tr>
+                <tr>
+                    <td>orgid</td><td><input type="text" name="orgid" placeholder="Введите orgid"></td><td>57</td><td>36</td>
+                </tr>
+                <tr>
+                    <td>formid</td><td><input type="text" name="formid" placeholder="Введите formid"></td><td>57</td><td>36</td>
+                </tr>
+                <tr>
+                    <td>code</td><td><input type="text" name="code" placeholder="Введите code"></td><td>57</td><td>36</td>
+                </tr>
+                <tr>
+                    <td>ltpa</td><td><input type="text" name="ltpa" placeholder="Введите ltpa"></td><td>57</td><td>36</td>
+                </tr>
+                <tr>
+                    <td>sudirresponse</td><td><input type="text" name="sudirresponse" placeholder="Введите sudirresponse"></td><td>57</td><td>36</td>
+                </tr>
+                <tr>
+                    <td>ymdh</td><td><input type="text" name="ymdh" placeholder="Введите ymdh"></td><td>57</td><td>36</td>
+                </tr>
+            </table>
             <button type="submit">Добавить</button>
         </form>
     </div>
@@ -14,10 +50,25 @@
         <input type="text" name="filter">
         <button type="submit">Найти</button>
     </form>
+    <div>Аналитика</div>
+    <form method="post" action="userAnalitic">
+        <button type="submit">Аналитика по пользователям</button>
+    </form>
     <div>Загрузить данные в базу</div>
     <form method="post" action="populate_db">
         <button type="submit">Начать загрузку</button>
     </form>
+
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        table, td, th {
+            border: 1px solid #999;
+            padding: 5px;
+        }
+    </style>
     <table>
 
         <tr>
@@ -53,15 +104,6 @@
         </tr>
     {{/messages}}
         </table>
-    <!--
-    {{#messages}}
-    <div>
-        <type>{{id}}</type>
-        <span>{{text}}</span>
-        <sudirresponse>{{tag}}</sudirresponse>
-        <sudirresponse>{{grp}}</sudirresponse>
-    </div>
-    {{/messages}}
--->
+
 </body>
 </html>

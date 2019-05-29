@@ -10,6 +10,8 @@ import org.springframework.stereotype.Service;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -31,7 +33,7 @@ public class MessageServiceImpl implements MessageService {
                     continue;
                 }else{
                     messageRepo.save(new Message(record.get("ssoid"),
-                            record.get("ts"),
+                            Long.parseLong(record.get("ts")),
                             record.get("grp"),
                             record.get("type"),
                             record.get("subtype"),
@@ -62,6 +64,16 @@ public class MessageServiceImpl implements MessageService {
     @Override
     public List<Message> findAll() {
         return messageRepo.findAll();
+    }
+
+    public void findBiggestPunkt(){
+        List<Long> ts= new ArrayList<>();
+
+        for(int i= 0; i < findAll().size(); i++){
+            System.out.println(ts.add(findAll().get(i).getTs()));
+
+        }
+
     }
 
 
