@@ -16,7 +16,7 @@ import java.util.List;
 
 @Service
 public class MessageServiceImpl implements MessageService {
-    @Autowired
+
     private MessageRepo messageRepo;
     @Override
     public void save(Message message) {
